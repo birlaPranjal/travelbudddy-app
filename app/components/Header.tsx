@@ -24,7 +24,7 @@ const Header = () => {
     <View style={styles.header}>
       <TouchableOpacity onPress={() => navigation.navigate('Home')} style={styles.logoContainer}>
         <Image 
-          source={require('../assets/logo.png')} 
+          source={{ uri: 'https://travelbudyy.vercel.app/_next/static/media/logo.a4fbe2b5.svg' }} 
           style={styles.logo} 
         />
         <Text style={styles.logoText}>TravelBuddy</Text>
