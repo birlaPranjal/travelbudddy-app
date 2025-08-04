@@ -68,15 +68,15 @@ const SignInScreen = () => {
     try {
       const result = await signIn(email, password);
       
-      if (result.error) {
+      if (result?.error) {
         setError(result.error);
         return;
       }
       
       // If email not verified, navigate to verification screen
-      if (!result.user?.isVerified) {
+      if (result && !result.user?.isVerified) {
         navigation.navigate('VerifyEmail', { email });
-      } else {
+      } else if (result && result.user?.isVerified) {
         navigation.navigate('Profile');
       }
     } catch (error) {
