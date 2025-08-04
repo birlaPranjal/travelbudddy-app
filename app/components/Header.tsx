@@ -5,7 +5,7 @@ import { useNavigation } from '@react-navigation/native';
 import { DrawerNavigationProp } from '@react-navigation/drawer';
 import { RootStackParamList } from '../types/navigation';
 
-const navLinks = [
+const navLinks: Array<{ title: string, path: string }> = [
   { title: 'Home', path: 'Home' },
   { title: 'About', path: 'About' },
   { title: 'Contact', path: 'Contact' },

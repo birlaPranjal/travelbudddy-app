@@ -41,7 +41,7 @@ export default function ItinerariesScreen() {
   ]);
 
   const handleViewDetails = (id: string) => {
-    router.push(`/itineraries/${id}`);
+    // router.push(`/itineraries/${id}`);
   };
 
   const renderItem = ({ item }: { item: Itinerary }) => (

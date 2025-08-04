@@ -1,7 +1,7 @@
 import { Stack } from 'expo-router';
 import AuthLayout from '@/app/components/AuthLayout';
 
-export default function AuthLayout() {
+export default function AuthLayoutNEW() {
   return (
     <AuthLayout>
       <Stack>
@@ -12,3 +12,5 @@ export default function AuthLayout() {
     </AuthLayout>
   );
 }
+
+
