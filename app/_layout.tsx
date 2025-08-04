@@ -1,28 +1,16 @@
-import React from 'react';
-import { View, StyleSheet, SafeAreaView, StatusBar } from 'react-native';
-import Header from './components/Header';
+import { Stack } from 'expo-router';
+import { AuthProvider } from '@/app/context/AuthContext';
 
-const AuthLayout = ({ children }: { children: React.ReactNode }) => {
+export default function RootLayout() {
   return (
-    <SafeAreaView style={styles.container}>
-      <StatusBar barStyle="light-content" />
-      <Header />
-      <View style={styles.content}>
-        {children}
-      </View>
-    </SafeAreaView>
+    <AuthProvider>
+      <Stack>
+        <Stack.Screen name="(auth)" options={{ headerShown: false }} />
+        <Stack.Screen name="(app)" options={{ headerShown: false }} />
+        <Stack.Screen name="index" options={{ headerShown: false }} />
+        <Stack.Screen name="about" options={{ title: 'About' }} />
+        <Stack.Screen name="contact" options={{ title: 'Contact' }} />
+      </Stack>
+    </AuthProvider>
   );
-};
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#1a1a1a',
-  },
-  content: {
-    flex: 1,
-    paddingTop: 60, // Adjust based on header height
-  },
-});
-
-export default AuthLayout;
+}
