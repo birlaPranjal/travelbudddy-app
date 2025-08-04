@@ -13,8 +13,7 @@ type User = {
 
 type AuthContextType = {
   user: User | null;
-  signIn: (email: string, password: string) => Promise<{user?: User, error?: string}>;
-  signIn: (provider: 'google' | 'github') => Promise<void>;
+  signIn: (emailOrProvider: string | 'google' | 'github', password?: string) => Promise<{user?: User, error?: string} | void>;
   signOut: () => Promise<void>;
   loading: boolean;
 };
