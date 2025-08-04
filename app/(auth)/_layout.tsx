@@ -12,5 +12,3 @@ export default function AuthLayoutNEW() {
     </AuthLayout>
   );
 }
-
-

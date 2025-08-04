@@ -9,7 +9,7 @@ export default function AppLayout() {
 
   useEffect(() => {
     if (!loading && !user) {
-      router.push('/(auth)/sign-in');
+      router.push('/(auth)/signin');
     }
   }, [user, loading]);
 
